@@ -67,7 +67,7 @@ html {
     font-family: 'Montserrat', sans-serif;
     text-transform: uppercase;
   }
-  img {
+  .profpic img {
     width: 50px;
     height: 50px;
     -webkit-border-radius: 50%;
@@ -150,20 +150,67 @@ html {
   }
 /* 
   SECOND SECTION  */
+
+  .top-txt {
+      text-align: center;
+  }
   .cardTwo {
       margin: 0 auto;
       background: black;
-      width: 800px;
+      width: 50%;
       height: 300px;
+      position:relative;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   }
   .image {
+    position: relative;
+    display:inline-block;
     width: 500px;
     height: 300px;
-    background:grey;
+    background: linear-gradient(135deg, #76c5b5 0%, #536291 100%);
     -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+    overflow:hidden;
   }
-  
+
+  .foreground {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index:1;
+  }
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index:0;
+}
+.cardTwo p {
+    color:white;
+    width: 18%;
+    display: inline-block
+}
+
+.card-bottom {
+    height: 200px;
+    width: 90%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -200px;
+    margin: auto;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ECECEC;
+    padding: 10px 20px;
+    border-radius: 3px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
   // Extra small devices (portrait phones, less than 576px)
   // No media query since this is the default in Bootstrap
   
