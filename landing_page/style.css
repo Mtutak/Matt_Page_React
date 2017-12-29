@@ -1,0 +1,180 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+*, *:before, *:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
+    }
+  
+  body {
+    background: #F0EFED;
+    background-image: linear-gradient(to bottom, #E5E4E5, #C2C1C2);
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+  }
+
+  html, body {
+    height: 100vh;
+  }
+
+  .menu {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    width: 32px;
+    height: 32px;
+    top: 30px;
+    left: 30px;
+  }
+  .menu__trigger:before, .menu__trigger:after, .menu__trigger span {
+    position: absolute;
+    width: 20px;
+    height: 3px;
+    top: 8.5px;
+    background: white;
+    border-radius: 2px;
+  }
+  .menu__trigger:before {
+    content: "";
+    top: 2.5px;
+  }
+  .menu__trigger:after {
+    content: "";
+    top: 14.5px;
+  }
+  a, a * {
+    cursor: pointer !important;
+  }
+
+  .main {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .main {
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  background: linear-gradient(135deg, #76c5b5 0%, #536291 100%);
+  
+  }
+  .maintxt {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+  }
+  img {
+    width: 50px;
+    height: 50px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border:5px solid #FFFFFF;
+    background-color:#02083D;
+    -webkit-box-shadow: #B3B3B3 10px 10px 10px;
+    -moz-box-shadow: #B3B3B3 10px 10px 10px; 
+    box-shadow: #B3B3B3 10px 10px 10px;
+  }
+  
+  .sectionOne {
+    display:inline-block;
+    margin:20px 0px 5px 10px;
+    width: 60%;
+    background-color:white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+  }
+  .sectionTwo {
+    display:inline-block;
+    margin:10px 10px 5px 10px;
+    width: 35%;
+    background-color:white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Effect 4: bottom border enlarge */
+  nav a {
+      position: relative;
+      display: inline-block;
+      margin: 15px 25px;
+      outline: none;
+      color: black;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 400;
+      text-shadow: 0 0 1px rgba(255,255,255,0.3);
+      font-size: 1.35em;
+  }
+  
+  nav a:hover,
+  nav a:focus {
+      outline: none;
+  }
+  .cl-effect-4 a {
+      padding: 0 0 10px;
+  }
+  
+  .cl-effect-4 a::after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: black;
+      content: '';
+      opacity: 0;
+      -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+      -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+      transition: height 0.3s, opacity 0.3s, transform 0.3s;
+      -webkit-transform: translateY(-10px);
+      -moz-transform: translateY(-10px);
+      transform: translateY(-10px);
+  }
+  
+  .cl-effect-4 a:hover::after,
+  .cl-effect-4 a:focus::after {
+      height: 5px;
+      opacity: 1;
+      -webkit-transform: translateY(0px);
+      -moz-transform: translateY(0px);
+      transform: translateY(0px);
+  }
+/* 
+  SECOND SECTION  */
+  .cardTwo {
+      margin: 0 auto;
+      background: black;
+      width: 800px;
+      height: 300px;
+  }
+  .image {
+    width: 500px;
+    height: 300px;
+    background:grey;
+    -webkit-clip-path: polygon(0 0, 100% 0, 75% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 70% 100%, 0% 100%);
+  }
+  
+  // Extra small devices (portrait phones, less than 576px)
+  // No media query since this is the default in Bootstrap
+  
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) { ... }
+  
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) { ... }
+  
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) { ... }
+  
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) { ... }
